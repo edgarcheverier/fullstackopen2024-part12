@@ -1,0 +1,24 @@
+apt-get update
+apt-get -y install curl
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
+exit
+docker start -i a2997e8c06fa
+nvm install 20
+node -v
+node /usr/src/app/index.js
+exit
+
+docker ps -a
+docker commit a2997e8c06fa hello-node-world
+docker image ls
+docker container rm a2997e8c06fa
+docker container run -it --name hello-node node:20 bash
+
+mkdir /usr/src/app
+exit
+docker container cp ./index.js hello-node:/usr/src/app/index.js
+
+docker ps -a
+docker start -i 23b92ea80c96
+node /usr/src/app/index.js
+exit

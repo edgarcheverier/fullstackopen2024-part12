@@ -1,0 +1,23 @@
+docker run -it ubuntu bash
+ls
+cd usr
+ls
+cd src
+mkdir app
+cd app
+touch index.js
+exit
+
+docker container run --rm ubuntu ls
+docker container ls -a
+docker ps -a
+docker start a2997e8c06fa
+docker ps -a
+docker ps
+docker kill a2997e8c06fa
+docker ps -a
+docker start -i a2997e8c06fa
+apt-get update
+apt-get -y install nano
+ls
+nano /usr/src/app/index.js
