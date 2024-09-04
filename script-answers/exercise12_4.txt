@@ -22,3 +22,9 @@ docker ps -a
 docker start -i 23b92ea80c96
 node /usr/src/app/index.js
 exit
+
+npx express-generator
+npm install
+DEBUG=part12-containers-applications-main:* npm start
+docker build -t express-server .
+docker run -p 3123:3000 express-server

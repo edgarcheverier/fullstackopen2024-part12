@@ -2,6 +2,8 @@ FROM node:20
 
 WORKDIR /usr/src/app
 
-COPY ./index.js ./index.js
+COPY . .
 
-CMD node index.js
+ENV DEBUG=part12-containers-applications-main:*
+
+CMD npm start
